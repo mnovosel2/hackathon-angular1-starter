@@ -1,0 +1,39 @@
+/**************************************
+    GLOBAL
+**************************************/
+$susy: (
+  columns: 12,
+  container: auto,
+  global-box-sizing: border-box 
+);
+@include border-box-sizing;
+
+/**************************************
+    TODO: SELECTION COLORS
+**************************************/
+
+$htmlselectioncolor: #ffffff;
+$htmlselectionbackgroundcolor: #000000;
+
+
+/**************************************
+    TODO: RESPONSIVE VARIABLES
+**************************************/
+
+$screen-lg-desktop-custom: 1156px;
+$screen-md-desktop-custom: 1024px;
+$screen-sm-desktop-custom: 660px;
+$screen-xs-desktop-custom: 350px;
+/**************************************
+    SELECTION
+**************************************/
+
+::selection {
+    background-color: $htmlselectionbackgroundcolor;
+    color: $htmlselectioncolor;
+}
+
+::-moz-selection {
+    background-color: $htmlselectionbackgroundcolor;
+    color: $htmlselectioncolor;
+}

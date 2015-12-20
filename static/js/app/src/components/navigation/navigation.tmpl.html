@@ -1,0 +1,7 @@
+<nav class="navigation">
+    <ul class="navigation__list">
+        <li class="navigation__list-item" ng-repeat="item in ::vm.navigation">
+        	<a ui-sref="{{::item.state}}" class="navigation__anchor">{{::item.label}}</a>
+        </li>
+    </ul>
+</nav>

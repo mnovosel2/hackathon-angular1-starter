@@ -1,0 +1,9 @@
+<form novalidate ng-submit="vm.editProfile(user)" ng-init="vm.viewProfile()">
+	<label for="name">First name</label>
+	<input type="text" id="name" name="name" ng-model="user.firstName" value="{{vm.profile.firstName}}"/>
+	<label for="surname">Last name</label>
+	<input type="text" id="surname" name="surname" ng-model="user.lastName" value="{{vm.profile.lastName}}"/>
+	<label for="password">Password</label>
+	<input type="password" required name="password" id="password">
+	<input type="submit" value="Update profile">
+</form>

@@ -1,0 +1,16 @@
+<div class="register">
+    <div class="register__inner">
+        <form  class="register__form" novalidate ng-submit="vm.registerUser(user)">
+        	<label for="email" class="register__label form-element__label">Email</label>
+        	<input type="text" class="register__input form-element__input" id="email" name="email" ng-model="user.email">
+            <label for="username" class="register__label form-element__label">Username</label>
+            <input type="text" class="register__input form-element__input" id="username" name="username" ng-model="user.username">
+			<label for="password" class="register__label form-element__label">Password</label>
+        	<input type="password" class="register__input form-element__input" id="password" name="password" ng-model="user.password">  
+
+            <label for="confirm" class="register__label form-element__label">Confirm</label>
+            <input type="password" class="register__input form-element__input" id="confirm" name="password" ng-model="user.confirm" compare-to="user.password">  
+            <button type="submit" class="register__submit form-element__submit">Send</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,121 @@
+.dashboard {
+    &-header {
+        overflow: hidden;
+    }
+}
+
+.dashboard-header {
+    background:$dark-purple;
+    @include box-shadow(rgba(61,61,61,0.63),0px,2px,5px,-1px);
+    height: 65px;
+    padding-top: 15px;
+    z-index:10;
+    position:relative;
+    &__logo {
+        @include span(3);
+        @include push(1);
+    }
+    &__profile {
+        @include span(5 of 12);
+        @include push(2);
+    }
+}
+
+.profile-notif {
+    @include push(2 of 5);
+    @include span(1 of 5);
+}
+
+.profile-info {
+    @include push(1 of 5);
+    @include span(1 of 5 last);
+}
+
+.dashboard-nav {
+    @include span(2);
+    height: 100%;
+    position: fixed;
+    background: $light-gray;
+    &__home {
+        width: 75%;
+        margin: 15px auto 0;
+        height: 40px;
+        text-align: center;
+        display: block;
+        border: 1px solid $muted-purple;
+        font-family: $font-pt;
+        @include font-size(11px, 14px);
+        text-transform: uppercase;
+        @include spacing(140);
+        color: $muted-purple;
+        font-weight: 700;
+        padding-top: 13px;
+        background: transparent;
+    }
+}
+
+.dashboard-nav__list {
+    width: 100%;
+    &-item {
+        width: 100%;
+        height: 70px;
+        border-top: 1px solid $border-gray;
+        position: relative;
+        overflow: hidden;
+        &:last-child {
+            border-bottom: 1px solid $border-gray;
+        }
+        &--back {
+            height:80px;
+            padding-top:5px;
+            &:hover {
+                border-left: 0;
+            }
+        }
+    }
+    &-anchor {
+        font-family: $font-pt;
+        display: block;
+        width: 100%;
+        color: $muted-purple;
+        height: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        @include font-size(11px, 30px);
+        @include spacing(140);
+        padding-top: 23px;
+        @include animation(background);
+        &:hover {
+            background: darken($light-gray, 4%);
+            border-left: 4px solid $dark-purple;
+            padding-right: 4px;
+        }
+    }
+}
+
+.dashboard-details {
+    position: relative;
+    @include push(2);
+    height:100%;
+    padding:40px;
+    &__content{
+        height:100%;
+        margin-top:40px;
+        overflow:hidden;
+        @include span(7);
+    }
+}
+.details-info{
+    padding-bottom:10px;
+    border-bottom:1px solid $border-gray;
+    height:40px;
+    &__title{
+        text-transform: uppercase;
+        font-weight: 700;
+        @include spacing(140);
+         @include font-size(14px, 30px);
+        color:$muted-purple;
+        font-family:$font-pt;
+    }
+}

@@ -1,0 +1,11 @@
+.navigation{
+	overflow:hidden;
+	&__list{
+		width:100%;
+		@include push(4);
+		overflow:hidden;
+	}
+	&__list-item{
+		@include span(2);
+	}
+}

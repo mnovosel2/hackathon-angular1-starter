@@ -1,0 +1,50 @@
+html{
+    @include border-box;
+    height:100%;
+    
+
+}
+*,*:after,*:before{
+    box-sizing:inherit;
+    -moz-box-sizing:inherit;
+    -webkit-box-sizing: inherit;
+    -webkit-font-smoothing: subpixel-antialiased;;
+}
+img{
+    box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    -webkit-box-sizing:content-box;
+}
+body{
+    position: relative;
+    -webkit-text-size-adjust: none;
+    background: white;
+	height:100%;
+}
+
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+

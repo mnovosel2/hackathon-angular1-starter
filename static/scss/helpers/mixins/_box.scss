@@ -1,0 +1,63 @@
+@mixin border-box {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+@mixin border-radius($radius: 10px) {
+    @if $radius == 'circle' {
+        border-radius: 100%;
+        -moz-border-radius: 100%;
+        -webkit-border-radius: 100%;
+    } @else {
+        border-radius: $radius;
+        -moz-border-radius: $radius;
+        -webkit-border-radius: $radius;
+    }
+}
+
+@mixin border-radius-top($radius: 10px) {
+    border-radius: $radius $radius 0 0;
+    -moz-border-radius: $radius $radius 0 0;
+    -webkit-border-radius: $radius $radius 0 0;
+}
+
+@mixin border-radius-bottom($radius: 10px) {
+    border-radius: 0 0 $radius $radius;
+    -moz-border-radius: 0 0 $radius $radius;
+    -webkit-border-radius: 0 0 $radius $radius;
+}
+
+@mixin border-radius-left($radius: 10px) {
+    border-radius: $radius 0 0 $radius;
+    -moz-border-radius: $radius 0 0 $radius;
+    -webkit-border-radius: $radius 0 0 $radius;
+}
+
+@mixin border-radius-right($radius: 10px) {
+    border-radius: 0 $radius $radius 0;
+    -moz-border-radius: 0 $radius $radius 0;
+    -webkit-border-radius: 0 $radius $radius 0;
+}
+
+@mixin box-shadow($color: transparent, $h-shadow: 0, $v-shadow: 0, $blur: 0, $spread: 0, $type: none) {
+    @if $type == "inset" {
+        box-shadow: $h-shadow $v-shadow $blur $spread $color inset;
+        -moz-box-shadow: $h-shadow $v-shadow $blur $spread $color inset;
+        -webkit-box-shadow: $h-shadow $v-shadow $blur $spread $color inset;
+    } @else {
+        box-shadow: $h-shadow $v-shadow $blur $spread $color;
+        -moz-box-shadow: $h-shadow $v-shadow $blur $spread $color;
+        -webkit-box-shadow: $h-shadow $v-shadow $blur $spread $color;
+    }
+}
+
+@mixin padding-top-bottom($padding) {
+    padding-top: $padding;
+    padding-bottom: $padding;
+}
+
+@mixin padding-left-right($padding) {
+    padding-left: $padding;
+    padding-right: $padding;
+}

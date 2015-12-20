@@ -1,0 +1,60 @@
+<div class="container-admin">
+    <div class="dashboard">
+        <div class="dashboard-header">
+            <div class="dashboard-header__logo">
+                <p>Logo</p>
+            </div>
+            
+            <div class="dashboard-header__profile">
+                <div class="profile-notif">
+                    <a href="#" class="profile-notif__anchor"></a>
+                    <div class="profile-notif">
+                    	Notif
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <a href="#" class="profile-info__anchor"></a>
+                    <div class="profile-info__details">
+                    	Details
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="dashboard-nav">
+             <ul class="dashboard-nav__list">
+
+            	<li class="dashboard-nav__list-item dashboard-nav__list-item--back">
+            		<a ui-sref="" class="dashboard-nav__home hvr-sweep-to-bottom">Home</a>
+            	</li>
+                <li class="dashboard-nav__list-item" ng-repeat="item in ::vm.navigation">
+                    <a ui-sref="{{::item.url}}" class="dashboard-nav__list-anchor">{{::item.label}}</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="dashboard-details dashboard-details--add">
+            <div class="dashboard-details__info details-info">
+                <div class="details-info__title">
+                    Add
+                </div>
+            </div>
+            <div class="dashboard-details__content">
+                <form method="post" novalidate class="component-form">
+                    <div class="form-element">
+                        <label class="form-element__label" for="">Type something</label>
+                        <input class="form-element__input" type="text" />
+                    </div>
+
+                    <div class="form-element">
+                        <label class="form-element__label" for="">Type something</label>
+                        <input class="form-element__input" type="text" />
+                    </div>
+                    <div class="form-element">
+                        <label class="form-element__label" for="">Type something</label>
+                        <input class="form-element__input" type="text" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

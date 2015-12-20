@@ -1,0 +1,10 @@
+<div class="user" ng-init="vm.viewProfile()">
+    <h3>User profile</h3> 
+    <ul class="profile">
+    	<li class="profile__item">{{vm.profile.firstName}}</li>
+    	<li class="profile__item">{{vm.profile.lastName}}</li>
+    	<li class="profile__item">
+    		<a ui-sref="hackathon.edit-profile({id:vm.profile.id})">Edit</a>
+    	</li>
+    </ul>
+</div>

@@ -1,0 +1,27 @@
+<div class="login-container">
+    <div class="login">
+        <div class="login__inner">
+            <form novalidate class="login__form" ng-submit="vm.login(user)">
+                <div class="form-element login-element">
+                    <label class="form-element__label" for="">Type something</label>
+                    <input class="form-element__input" type="text" />
+                </div>
+                <div class="form-element login-element login-element--last">
+                    <label class="form-element__label" for="">Type something</label>
+                    <input class="form-element__input" type="text" />
+                </div>
+                <div class="component-button">
+                    <button type="submit" class="login__submit btn btn--bg form-element__submit">Log in</button>
+                </div>
+            </form>
+            <div class="login-social">x
+                <div class="component-button">
+                    <button ng-click="vm.loginFacebook()" class="login__facebook btn btn--bg">Facebook</button>
+                </div>
+                <div class="component-button">
+                    <button ng-click="vm.loginGoogle()" class="login__google btn btn--bg form-element__submit">Google</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

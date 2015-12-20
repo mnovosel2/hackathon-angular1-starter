@@ -1,0 +1,44 @@
+@mixin background($background-image, $background-position: 'top left', $background-repeat: 'no-repeat') {
+    @if $imglink == "HTML" {
+        background-image: url('#{$routeHTML}#{$background-image}');
+    } @else if $imglink == "PHP" {
+        background-image: url('#{$routePHP}#{$background-image}');
+    }
+    background-repeat: #{$background-repeat};
+    background-position: #{$background-position};
+}
+
+@mixin background-retina-icon($background-image, $background-width, $background-height, $background-position: 'top left', $background-repeat: 'no-repeat') {
+    display: inline-block;
+    width: $background-width/2;
+    height: $background-height/2;
+    @if $imglink == "HTML" {
+        background-image: url('#{$routeHTML}#{$background-image}');
+    } @else if $imglink == "PHP" {
+        background-image: url('#{$routePHP}#{$background-image}');
+    }
+    background-size: 100%;
+    background-repeat: #{$background-repeat};
+    background-position: #{$background-position};
+}
+
+@mixin background-image($background-image) {
+    @if $imglink == "HTML" {
+        background-image: url('#{$routeHTML}#{$background-image}');
+    } @else if $imglink == "PHP" {
+        background-image: url('#{$routePHP}#{$background-image}');
+    }
+}
+
+@mixin background-cover {
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+// noinspection ALL
+@mixin background-rgba($color: transparent, $opacity: 1) {
+    background-color: $color;
+    background-color: rgba($color, $opacity);
+}
